@@ -15,6 +15,23 @@ module.exports = {
         loaders: ['react-hot', 'babel'],
         include: path.join(__dirname, 'app'),
         exclude: /node_modules/
+      },
+      {
+        test: /\.scss$/,
+        loader: 'style!css!sass'
+      },
+      {
+        test: /\.(jpg|gif|png)$/,
+        loader: "url?limit=25000",
+        exclude: /node_modules/
+      },
+      {
+        test: /\.woff?$/,
+        loader: "url?limit=100000"
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "file"
       }
     ]
   },

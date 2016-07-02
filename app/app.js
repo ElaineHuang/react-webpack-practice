@@ -5,10 +5,12 @@ import Header from './header.js';
 import Content from './content.js';
 import Footer from './footer.js';
 
+import './style.scss';
+
 class App extends React.Component {
   render() {
     return (
-      <div className="app">
+      <div className='app'>
         <Header />
         <Content />
         <Footer />
