@@ -1,9 +1,9 @@
 'use strict';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from './header.js';
-import Content from './content.js';
-import Footer from './footer.js';
+import Header from './header';
+import Content from './content';
+import Footer from './footer';
 
 import './style.scss';
 
