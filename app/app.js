@@ -1,4 +1,3 @@
-'use strict';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Header from './header';
@@ -10,7 +9,7 @@ import './style.scss';
 class App extends React.Component {
   render() {
     return (
-      <div className='app'>
+      <div className="app">
         <Header />
         <Content />
         <Footer />
@@ -19,10 +18,10 @@ class App extends React.Component {
   }
 }
 
-if(module.hot) {
+if (module.hot) {
   module.hot.accept();
 }
 
 ReactDOM.render(
   <App />, document.getElementById('app')
-)
+);
