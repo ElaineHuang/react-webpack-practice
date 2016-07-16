@@ -8,7 +8,9 @@
     "jsx": true
   },
   "env": {
-    "es6": true
+    "es6": true,
+    "browser": true,
+    "node": true
   },
   "rules": {
     "max-len": [1, 120, 2, {ignoreComments: true}],
@@ -20,6 +22,11 @@
     "no-underscore-dangle": [0],
     "react/prefer-stateless-function": 0,
     "arrow-body-style": ["error", "always"],
-    "no-console": 0
+    "no-console": 1
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": "webpack.config.js"
+    }
   }
 }
