@@ -16,7 +16,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(paths.root, 'build'),
-    filename: '[name].[chunkhash].js'
+    filename: '[name].[chunkhash].js',
+    publicPath:    './',
   },
   module: {
     loaders: [
