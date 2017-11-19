@@ -14,8 +14,6 @@ module.exports = {
     // for resolving css/sass-loader with source map breaks url-loader
     // https://github.com/webpack/css-loader/issues/232
     publicPath: `${serverConfig.devServerAddress}/`,
-    hotUpdateChunkFilename: 'hot/hot-update.js',
-    hotUpdateMainFilename: 'hot/hot-update.json'
   },
   module: {
     loaders: [
