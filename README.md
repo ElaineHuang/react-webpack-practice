@@ -2,10 +2,11 @@
 
 React Basic Environment
 
-1. install node, npm
+1. install node, yarn
 2. git clone
-3. npm install
-4. npm start
+3. yarn install
+4. yarn dev
+5. yarn build
 
 # Reference:
 
@@ -28,3 +29,4 @@ React Basic Environment
 * React Redux
 * React Router
 * React Saga
+* Redux Form
