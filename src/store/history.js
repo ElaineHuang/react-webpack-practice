@@ -1,4 +1,3 @@
-import { useRouterHistory } from 'react-router';
-import { createHistory } from 'history';
+import { createBrowserHistory } from 'history';
 
-export default useRouterHistory(createHistory)();
+export default createBrowserHistory();
