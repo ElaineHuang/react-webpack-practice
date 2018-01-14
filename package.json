@@ -6,7 +6,8 @@
   "scripts": {
     "build": "rm -rf ./build/* && NODE_ENV='production' webpack -p --config ./configs/webpack.config.js",
     "watch": "rm -rf ./build/* && NODE_ENV='development' webpack --watch --config ./configs/webpack.config.js",
-    "dev": "NODE_ENV='development' node server.hot.js"
+    "dev": "NODE_ENV='development' node server.hot.js",
+    "node": "node server.js"
   },
   "author": "elaine",
   "license": "ISC",
@@ -41,11 +42,12 @@
     "webpack-dev-server": "^2.9.4"
   },
   "dependencies": {
+    "express": "^4.16.2",
     "lodash": "^4.17.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
-    "react-router-dom": "^4.2.2",
+    "react-router": "3.2.0",
     "react-router-redux": "^4.0.8",
     "redux": "^3.7.2",
     "redux-form": "^7.2.0",

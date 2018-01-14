@@ -31,7 +31,7 @@ const server   = new WebpackDevServer(compiler, {
 server.listen(
   serverConfig.devServerPort,
   () => {
-    console.log('Development server now is listening on:');
+    console.log('WebpackDevServer now is listening on:');
     console.log(`http://localhost:${serverConfig.devServerPort}`);
     console.log(`http://127.0.0.1:${serverConfig.devServerPort}`);
     console.log(serverConfig.devServerAddress);

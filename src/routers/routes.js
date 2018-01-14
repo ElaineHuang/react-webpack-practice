@@ -2,20 +2,19 @@ import React from 'react';
 import {
   Router,
   Route,
-  Switch,
   IndexRoute,
-} from 'react-router-dom';
+} from 'react-router';
 import { history } from 'store';
 import PATHS from 'constants/paths';
 import MainContainer from 'containers/MainContainer';
 import HomeContainer from 'containers/HomeContainer';
+import AboutContainer from 'containers/AboutContainer';
 
 export default (
   <Router history={history}>
-    <Switch>
-      <MainContainer>
-        <Route path={PATHS.ROOT} component={HomeContainer} />
-      </MainContainer>
-    </Switch>
+    <Route component={MainContainer} path={PATHS.ROOT} >
+      <IndexRoute component={HomeContainer} />
+      <Route path={PATHS.ABOUT} component={AboutContainer} />
+    </Route>
   </Router>
 );
