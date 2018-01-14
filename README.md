@@ -11,7 +11,7 @@ React Basic Environment
 
 1. yarn dev (development mode)
 2. yarn build (build frontend code)
-3. yarn node (start node server)
+3. yarn api (start node server)
 
 # Reference:
 

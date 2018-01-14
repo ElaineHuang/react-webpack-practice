@@ -12,5 +12,5 @@ module.exports = {
   devServerPort,
   nodeServerPort,
   devServerAddress: `http://${devServerIP}:${devServerPort}`,
-  nodeDevAddress: `http://localhost:${nodeServerPort}`,
+  nodeDevAddress: `http://${devServerIP}:${nodeServerPort}`,
 };
