@@ -2,6 +2,7 @@ const serverConfig     = require('./configs/server-config');
 const express = require('express');
 const app = express();
 const history = require('express-history-api-fallback');
+const path = require('path');
 
 if (process.env.NODE_DEV !== 'production') {
   const webpackMiddleware = require('webpack-dev-middleware');
@@ -9,8 +10,7 @@ if (process.env.NODE_DEV !== 'production') {
   const webpackConfig = require('./configs/webpack.config.js');
   app.use(webpackMiddleware(webpack(webpackConfig)));
 } else {
-  const root = join(__dirname, 'build');
-
+  const root = path.resolve(__dirname, 'build');
   app.use(express.static(root));
   app.use(history('index.html', { root }));
 }
