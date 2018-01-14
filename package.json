@@ -7,8 +7,7 @@
     "build": "rm -rf ./build/* && NODE_ENV='production' webpack -p --config ./configs/webpack.config.js",
     "watch": "rm -rf ./build/* && NODE_ENV='development' webpack --watch --config ./configs/webpack.config.js",
     "dev": "NODE_ENV='development' node server.hot.js",
-    "node-dev": "node server.js",
-    "node": "NODE_ENV='production' && node server.js"
+    "node": "node server.js"
   },
   "author": "elaine",
   "license": "ISC",

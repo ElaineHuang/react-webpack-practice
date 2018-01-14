@@ -6,7 +6,12 @@ React Basic Environment
 2. git clone
 3. yarn install
 4. yarn dev
-5. yarn build
+
+# Execute
+
+1. yarn dev (development mode)
+2. yarn build (build frontend code)
+3. yarn node (start node server)
 
 # Reference:
 
