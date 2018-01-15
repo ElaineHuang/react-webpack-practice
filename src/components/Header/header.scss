@@ -1,0 +1,23 @@
+.header {
+  padding: 0 30px;
+  background: #2f3033;
+
+  .link,
+  .link-active {
+    padding: 30px;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    box-sizing: border-box;
+    border-bottom: 3px solid #2f3033;
+    transition: .5s;
+
+    &:hover {
+      border-bottom: 3px solid #0cc;
+    }
+  }
+
+  .link-active {
+    border-bottom: 3px solid white;
+  }
+}
