@@ -4,6 +4,7 @@ import Footer from './Footer';
 import Home from './Home';
 import Dialog from './Dialog';
 import Button from './Button';
+import Loading from './Loading';
 
 export {
   Main,
@@ -12,4 +13,5 @@ export {
   Home,
   Dialog,
   Button,
+  Loading,
 };

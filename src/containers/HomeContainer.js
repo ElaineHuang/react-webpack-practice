@@ -1,17 +1,20 @@
 import { connect } from 'react-redux';
 import Home from 'components/Home';
 import { toggleDialog } from 'reducers/ui';
+import { getPost } from 'reducers/post';
 import { bindActionCreators } from 'redux';
 
 const mapStateToProps = (state) => {
   return {
-    dialog: state.ui.dialog,
+    ui: state.ui,
+    post: state.post,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     toggleDialog: bindActionCreators(toggleDialog, dispatch),
+    getPost: bindActionCreators(getPost, dispatch),
   };
 };
 

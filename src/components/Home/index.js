@@ -2,32 +2,61 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import image from 'assets/bear.jpg';
 import styles from './home.scss';
-import { Dialog, Button } from 'components';
+import { Dialog, Button, Loading } from 'components';
 
 export default class Home extends PureComponent {
   static propTypes = {
     toggleDialog: PropTypes.func,
-    dialog: PropTypes.object,
+    ui: PropTypes.object,
+    getPost: PropTypes.func,
+    post: PropTypes.object,
   };
 
   static defaultProps = {
     toggleDialog: () => console.log('onToggle'),
-    dialog: { show: false, component: null },
+    ui: {
+      dialog: { show: false, component: null },
+      isLoading: false,
+    },
+    getPost: () => console.log('getPost'),
+    post: [],
   };
 
   handleDialog = () => {
     this.props.toggleDialog('testDialog');
   }
 
+  handleApiCall = () => {
+    this.props.getPost();
+  }
+
   render () {
-    const { dialog: { show, component }, toggleDialog } = this.props;
+    const {
+      ui: {
+        dialog: { show, component },
+        isLoading,
+      },
+      toggleDialog,
+      post,
+    } = this.props;
 
     return (
       <div className={styles.container}>
         <h1>Dialog / Button Component</h1>
         <Button onClick={this.handleDialog}>Dialog Test</Button>
         <h1>Image resource Test</h1>
-        <img src={image} alt="images" />
+        <img style={{ width: '300px' }} src={image} alt="images" />
+        <h1>API Test</h1>
+        <Button onClick={this.handleApiCall}>Fetch API</Button>
+        {isLoading && <Loading />}
+        {
+          !isLoading && post.title && (
+            <div className={styles['api-block']}>
+              <h4>Title: {post.title}</h4>
+              <p>Body: {post.body}</p>
+            </div>
+          )
+        }
         <Dialog
           show={show && component === 'testDialog'}
           onToggle={toggleDialog}
