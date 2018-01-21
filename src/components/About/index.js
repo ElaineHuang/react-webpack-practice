@@ -5,7 +5,7 @@ export default class About extends PureComponent {
   render () {
     return (
       <div>
-        About
+        <h1 style={{ textAlign: 'center' }}>React Router works!</h1>
       </div>
     );
   }
