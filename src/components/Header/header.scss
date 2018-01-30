@@ -2,7 +2,7 @@
   background: #2f3033;
 
   .nav {
-    width: 1190px;
+    max-width: 1190px;
     margin: 0 auto;
   }
 
@@ -23,6 +23,7 @@
   }
 
   .link-active {
-    border-bottom: 3px solid white;
+    color: #0cc;
+    border-bottom: 3px solid #0cc;
   }
 }
