@@ -8,7 +8,7 @@ export function* getPost (action) {
   yield put(toggleLoading(true));
   yield call(delay, 500);
   try {
-    const payload = yield call(API.getData, 'http://jsonplaceholder.typicode.com/posts/1');
+    const payload = yield call(API.getData, 'http://localhost:3000/api/test');
     yield put(getPostSuccess(payload));
   } catch (e) {
     console.log(e);

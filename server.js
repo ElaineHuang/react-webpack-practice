@@ -1,10 +1,26 @@
 const serverConfig = require('./configs/server-config');
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser');
 
 const app = express();
 const root = path.resolve(__dirname, 'build');
+const routes = require('./routes/index');
 
+app.all('*', (req, res, next) => {
+  res.header('Access-Control-Allow-Credentials', true);
+  res.header('Access-Control-Allow-Origin', 'http://localhost:8080');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, DELETE, PUT, OPTIONS, HEAD');
+  res.header('Access-Control-Allow-Headers', 'content-type');
+  if (req.method === 'OPTIONS') {
+    res.send(200);
+  } else {
+    next();
+  }
+});
+
+app.use(bodyParser.json());
+routes(app);
 app.use(express.static(root));
 app.get('*', function(req, res) {
   res.sendfile(path.resolve(root, 'index.html'));
